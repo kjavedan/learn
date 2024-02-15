@@ -1,0 +1,42 @@
+{
+  "compilerOptions": {
+    // specifies ECMAScript version to compile to
+    "target": "ES2020",
+    // enable emitting ECMAScript compliant class fields initializtion
+    "useDefineForClassFields": true,
+    // define the modlue system
+    "module": "ESNext",
+    // define the libraries to include when compiling ts code
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    // skip type checking of declaration files (*.d.ts)
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    // specifies how module are resolved -> (bundlers(vite, webpack, ect.) or typescript)
+    "moduleResolution": "bundler",
+    // allow importing ts files without specifying file extention
+    "allowImportingTsExtensions": true,
+    // allow importing json files directly into ts files
+    "resolveJsonModule": true,
+    // disable type checking across files, treating each file as seperate compilation unit
+    "isolatedModules": true,
+    // prevent ts from emitting output files.
+    "noEmit": true,
+    // keep jsx as it is without transforming it
+    "jsx": "preserve",
+
+    /* Linting */
+    // enable all type checking
+    "strict": true,
+    // flag unused local variables as erros during compilation
+    "noUnusedLocals": true,
+    // flag unused function parameters as erros during compilation
+    "noUnusedParameters": true,
+    // flag fallthrough cases in switch statement as an error during compilation
+    "noFallthroughCasesInSwitch": true
+  },
+  // specifies the files or globs that ts should include in the compilation process
+  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  // refrence other ts project that should be built before this project
+  "references": [{ "path": "./tsconfig.node.json" }]
+}

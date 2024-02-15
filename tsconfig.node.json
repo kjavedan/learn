@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    // improve build time -> cach incremental builds -> only recomile changed files
+    "composite": true,
+    // improve build time -> skip (*.d.ts) file checking
+    "skipLibCheck": true,
+    // module system to compile js output
+    "module": "ESNext",
+    // the strategy used for resolving module names -> (.e.g., vite, webpack)
+    "moduleResolution": "bundler",
+    // allow ts to generate default imports for modules that don't have default export
+    "allowSyntheticDefaultImports": true,
+    // enable all type checking optioins
+    "strict": true
+  },
+  // files that should be included in the complilation process
+  "include": ["vite.config.ts"]
+}
