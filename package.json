@@ -6,12 +6,9 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "serve": "vite preview"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "serve": "vite preview",
+    "lint:lint-staged": "lint-staged -c ./.husky/lintstagedrc.js",
+    "prepare": "husky"
   },
   "dependencies": {
     "vue": "^3.4.15"
