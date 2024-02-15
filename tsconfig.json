@@ -10,6 +10,24 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     // skip type checking of declaration files (*.d.ts)
     "skipLibCheck": true,
+    // enable sourceMap for easier debugging
+    "sourceMap": true,
+    // enable interoperability between different module system (CommonJS, ESM)
+    "esModuleInterop": true,
+    // allow js file to be included in the compilation process
+    "allowJs": true,
+    // module resolving root directory
+    "baseUrl": "./",
+    // allow function default exports for the first function of the file
+    "allowSyntheticDefaultImports": true,
+    // allow implicit use of any
+    "noImplicitAny": false,
+    // define rules for module resolvation
+    "paths": {
+      "@/*":[
+        "src/*"
+      ]
+    },
 
     /* Bundler mode */
     // specifies how module are resolved -> (bundlers(vite, webpack, ect.) or typescript)
@@ -33,7 +51,9 @@
     // flag unused function parameters as erros during compilation
     "noUnusedParameters": true,
     // flag fallthrough cases in switch statement as an error during compilation
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    // force consisten file naming
+    "forceConsistentCasingInFileNames": true,
   },
   // specifies the files or globs that ts should include in the compilation process
   "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
