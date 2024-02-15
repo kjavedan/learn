@@ -6,11 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "serve": "vite preview",
-    "prepare": "husky",
-    "test": "echo 'not tests configured'"
+    "serve": "vite preview"
   },
-
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
   "dependencies": {
     "vue": "^3.4.15"
   },

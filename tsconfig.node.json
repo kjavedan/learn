@@ -11,7 +11,8 @@
     // allow ts to generate default imports for modules that don't have default export
     "allowSyntheticDefaultImports": true,
     // enable all type checking optioins
-    "strict": true
+    "strict": true,
+
   },
   // files that should be included in the complilation process
   "include": ["vite.config.ts"]
