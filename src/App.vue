@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Layout from '@/layout/Layout.vue'
 import { useLocaleStoreWithOut } from './store/modules/locale'
 const { currentLocale } = useLocaleStoreWithOut()
 console.log(currentLocale)
@@ -6,8 +7,9 @@ console.log(currentLocale)
 
 <template>
   <el-config-provider namespace="ep">
-    <LocaleDropdown />
-    <h1>{{ $t('hello') }}</h1>
+    <Layout>
+      <LocaleDropdown />
+    </Layout>
   </el-config-provider>
 </template>
 

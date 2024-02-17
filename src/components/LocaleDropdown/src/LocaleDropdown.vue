@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import { ElButton, ElDropdown, ElDropdownMenu, ElDropdownItem } from 'element-plus'
-import { useLocaleStoreWithOut } from '@/store/modules/locale'
 import { unref } from 'vue'
+import { useLocale } from '@/hooks/web/useLocale'
+import { useLocaleStoreWithOut } from '@/store/modules/locale'
+import { ElButton, ElDropdown, ElDropdownMenu, ElDropdownItem } from 'element-plus'
 
 const { currentLocale, localeMap, setCurrentLocale } = useLocaleStoreWithOut()
 
@@ -10,6 +11,8 @@ const setLang = (newLang: LocaleType) => {
 
   window.location.reload()
   setCurrentLocale({ lang: newLang })
+  const { changeLocale } = useLocale()
+  changeLocale(newLang)
 }
 </script>
 

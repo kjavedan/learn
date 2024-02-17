@@ -8,13 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Backtop: (typeof import('./../src/components/Backtop/src/Backtop.vue'))['default']
-    ElButton: (typeof import('element-plus/es'))['ElButton']
     ElConfigProvider: (typeof import('element-plus/es'))['ElConfigProvider']
-    ElDropdown: (typeof import('element-plus/es'))['ElDropdown']
-    ElDropdownItem: (typeof import('element-plus/es'))['ElDropdownItem']
-    ElDropdownMenu: (typeof import('element-plus/es'))['ElDropdownMenu']
-    ElIcon: (typeof import('element-plus/es'))['ElIcon']
-    HelloWorld: (typeof import('./../src/components/HelloWorld.vue'))['default']
     LocaleDropdown: (typeof import('./../src/components/LocaleDropdown/src/LocaleDropdown.vue'))['default']
     RouterLink: (typeof import('vue-router'))['RouterLink']
     RouterView: (typeof import('vue-router'))['RouterView']
