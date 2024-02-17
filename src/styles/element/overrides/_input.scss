@@ -1,0 +1,8 @@
+.ep-input__wrapper {
+  border: solid;
+  border-radius: 8px !important;
+  background-color: var(--ep-bg-input) !important;
+  &.is-focus {
+    outline: var(--ep-border-width) var(--ep-border-style) var(--ep-color-primary);
+  }
+}

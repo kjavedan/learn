@@ -1,0 +1,17 @@
+.ep-dropdown__popper .ep-dropdown-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.ep-dropdown__popper {
+  --ep-dropdown-menuItem-hover-fill: var(--ep-bg-color-overlay-hover);
+  --ep-dropdown-menuItem-hover-color: var(--ep-color-primary);
+}
+.ep-dropdown__list {
+  padding: 0.4rem !important;
+}
+.ep-dropdown-menu__item {
+  border-radius: var(--ep-border-radius-small) !important;
+  // background-color: #191919 !important;
+}

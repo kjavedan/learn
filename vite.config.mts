@@ -2,9 +2,11 @@ import { resolve } from 'path'
 import vue from '@vitejs/plugin-vue'
 // @ts-ignore
 import EslintPlugin from 'vite-plugin-eslint'
+import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { type UserConfig, type ConfigEnv, loadEnv } from 'vite'
 import { ElementPlusResolver } from 'unplugin-vue-components/resolvers'
+import ElementPlus from 'unplugin-element-plus/vite'
 
 import Unocss from 'unocss/vite'
 import {
@@ -33,9 +35,17 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
   }
 
   return {
+    // BASE
     base: env.VITE_BASE_PATH,
+    // PLUGINS
     plugins: [
       vue(),
+      ElementPlus({
+        useSource: true
+      }),
+      AutoImport({
+        resolvers: [ElementPlusResolver()]
+      }),
       Components({
         // allow auto load markdown components under `./src/components/`
         extensions: ['vue', 'md'],
@@ -69,13 +79,15 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         include: ['src/**/*.vue', 'src/**/*.ts', 'src/**/*.tsx']
       })
     ],
+    // CSS
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: `@use "~/styles/element/index.scss" as *;`
+          additionalData: `@use "@/styles/element/index.scss" as *;`
         }
       }
     },
+    // RESOLVE
     resolve: {
       extensions: ['.mjs', '.js', '.ts', '.jsx', '.tsx', '.json', '.scss', '.css'],
       alias: [
@@ -85,6 +97,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         }
       ]
     },
+    // BUILD
     build: {
       minify: 'terser',
       outDir: env.VITE_OUT_DIR || 'dist',
@@ -96,6 +109,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
         }
       }
     },
+    // SERVER
     server: {
       port: 3000,
       proxy: {
@@ -107,6 +121,7 @@ export default ({ command, mode }: ConfigEnv): UserConfig => {
       },
       host: '0.0.0.0'
     },
+    // OPTIMIZE DPENDENCIES
     optimizeDeps: {
       include: ['vue']
     }

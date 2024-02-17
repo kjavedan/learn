@@ -1,0 +1,9 @@
+.ep-card {
+  border: none;
+}
+.ep-card__header {
+  border-bottom-style: dashed;
+}
+.ep-card.is-always-shadow {
+  box-shadow: var(--ep-box-shadow-lighter);
+}

@@ -1,0 +1,64 @@
+// Import dark theme
+@use 'element-plus/theme-chalk/src/dark/css-vars.scss' as *;
+
+// Overrides
+@import './element/overrides/card';
+@import './element/overrides/input';
+@import './element/overrides/select';
+@import './element/overrides/popper';
+@import './element/overrides/button';
+@import './element/overrides/collapse';
+@import './element/overrides/checkbox';
+@import './element/overrides/dropdown';
+
+*,
+::before,
+::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+}
+
+:root {
+  // COLORS
+  --ep-bg-color-page: #646cff;
+  --ep-bg-color-overlay: #fafcfe;
+  --ep-bg-color-overlay-hover: #efefef;
+  --ep-text-color-primary: #000;
+  --ep-text-color-regular: #000;
+  --ep-text-color-secondary: #a7a7a7;
+  --ep-bg-input: #ecf1f4;
+  // FONTS
+  --ep-font-family: 'Titillium Web', 'Anton', sans-serif;
+
+  // SPACING
+  --ep-component-size: 45px;
+
+  // BORDER
+  --ep-border-radius-small: 4px;
+  --ep-border-radius-base: 12px !important;
+  --ep-border-color: var(--ep-color-info-light-5);
+  --ep-border-width: 2px;
+  --ep-select-border: 2px;
+
+  // SHADOWS
+  --ep-box-shadow-light: 0px 0px 12px rgba(0, 0, 0, 0.08);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+// DARK THEME
+html.dark {
+  // COLORS
+  --ep-bg-color-overlay-hover: rgb(34, 34, 34);
+  --ep-bg-input: #191919;
+
+  // SHADOWS
+  --ep-box-shadow-light: 0px 0px 20px rgba(0, 0, 0, 0.4);
+}
+
+a {
+  text-decoration: none;
+}

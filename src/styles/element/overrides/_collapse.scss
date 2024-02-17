@@ -1,0 +1,18 @@
+.ep-collapse {
+  border: none !important;
+}
+.ep-collapse-item {
+  margin-bottom: 1rem;
+  background-color: var(--ep-color-info-light-3);
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+}
+
+.ep-collapse-item__header {
+  border: none !important;
+  background-color: transparent;
+}
+.ep-collapse-item__wrap {
+  background-color: transparent;
+  border: none;
+}

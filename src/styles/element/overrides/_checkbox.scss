@@ -1,0 +1,11 @@
+.ep-checkbox {
+  --ep-checkbox-input-height: 20px !important;
+  --ep-checkbox-input-width: 20px !important;
+  --ep-checkbox-font-size: 16px !important;
+}
+
+.ep-checkbox__inner::after {
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -60%) rotate(45deg) !important;
+}

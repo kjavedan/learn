@@ -1,14 +1,28 @@
+import '@/styles'
 import '@/plugins/unocss'
 
 // State management
 import { setupStore } from '@/store'
 
+// Localazation
+import { setupI18n } from '@/plugins/vueI18n'
+
+// UI library
+import { setupElementPlus } from '@/plugins/elementPlus'
+
 import { createApp } from 'vue'
-import './style.css'
 import App from './App.vue'
 
-const app = createApp(App)
+const setupAll = async () => {
+  const app = createApp(App)
 
-setupStore(app)
+  await setupI18n(app)
 
-app.mount('#app')
+  setupStore(app)
+
+  setupElementPlus(app)
+
+  app.mount('#app')
+}
+
+setupAll()
