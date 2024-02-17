@@ -56,7 +56,10 @@
     "forceConsistentCasingInFileNames": true,
   },
   // specifies the files or globs that ts should include in the compilation process
-  "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": [
+    "src",
+    "types/**/*.d.ts",
+  ],
   // refrence other ts project that should be built before this project
   "references": [{ "path": "./tsconfig.node.json" }]
 }
