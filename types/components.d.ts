@@ -15,5 +15,6 @@ declare module 'vue' {
     RouterLink: (typeof import('vue-router'))['RouterLink']
     RouterView: (typeof import('vue-router'))['RouterView']
     Sidebar: (typeof import('./../src/components/Sidebar/src/Sidebar.vue'))['default']
+    ThemeSwitch: (typeof import('./../src/components/ThemeSwitch/src/ThemeSwitch.vue'))['default']
   }
 }

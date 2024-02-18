@@ -1,6 +1,7 @@
 <template>
   <div>
     <h1>Simple Layout</h1>
+    <ThemeSwitch />
     <main>
       <slot></slot>
     </main>
