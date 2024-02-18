@@ -9,8 +9,11 @@ declare module 'vue' {
   export interface GlobalComponents {
     Backtop: (typeof import('./../src/components/Backtop/src/Backtop.vue'))['default']
     ElConfigProvider: (typeof import('element-plus/es'))['ElConfigProvider']
+    Footer: (typeof import('./../src/components/Footer/src/Footer.vue'))['default']
+    Header: (typeof import('./../src/components/Header/src/Header.vue'))['default']
     LocaleDropdown: (typeof import('./../src/components/LocaleDropdown/src/LocaleDropdown.vue'))['default']
     RouterLink: (typeof import('vue-router'))['RouterLink']
     RouterView: (typeof import('vue-router'))['RouterView']
+    Sidebar: (typeof import('./../src/components/Sidebar/src/Sidebar.vue'))['default']
   }
 }

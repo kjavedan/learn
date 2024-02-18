@@ -1,16 +1,12 @@
 <template>
   <div>
     <Header />
-    <Sidbar />
+    <Sidebar />
     <main> <slot></slot> </main>
     <Footer />
   </div>
 </template>
 
-<script setup>
-import Header from '@/layout/components/Header.vue'
-import Footer from '@/layout/components/Footer.vue'
-import Sidbar from '@/layout/components/Sidebar.vue'
-</script>
+<script setup></script>
 
 <style lang="scss" scoped></style>
