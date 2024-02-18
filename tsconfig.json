@@ -26,6 +26,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
+    // introduece global types of element plus
     "types": ["element-plus/global"],
 
     /* Bundler mode */

@@ -1,4 +1,4 @@
-import { ref, watch } from 'vue'
+import { ref } from 'vue'
 import { store } from '../index'
 import { defineStore } from 'pinia'
 import { useStorage } from '@/hooks/web/useStorage'
@@ -36,11 +36,6 @@ export const useLocaleStore = defineStore('locales', () => {
     currentLocale.value.elLocale = elLocaleMap[newLocaleMap?.lang]
     setStorage('lang', newLocaleMap?.lang)
   }
-
-  watch(currentLocale, (newVal) => {
-    console.log(currentLocale.value)
-    console.log(newVal)
-  })
 
   return { currentLocale, localeMap, setCurrentLocale }
 })
