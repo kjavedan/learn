@@ -1,5 +1,5 @@
 <template>
-  <div> dfgs </div>
+  <div> Auth Guard </div>
 </template>
 
 <script setup></script>

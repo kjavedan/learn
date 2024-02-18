@@ -2,16 +2,43 @@ import type { App } from 'vue'
 import type { RouteRecordRaw } from 'vue-router'
 import { createRouter, createWebHashHistory } from 'vue-router'
 
-import GuideView from '@/views/Guide/GuideView.vue'
+// Layouts
+import { SimpleLayout, AuthLayout, MainLayout } from '@/layout'
+
+// Components
+const GuideView = () => import('@/views/Guide/GuideView.vue')
+const LoginView = () => import('@/views/Login/LoginView.vue')
+const ProfileView = () => import('@/views/Profile/ProfileView.vue')
+const ComponentView = () => import('@/views/Component/ComponentView.vue')
 
 const routes = [
   {
     path: '/guide',
-    component: GuideView
+    component: GuideView,
+    meta: {
+      layout: SimpleLayout
+    }
+  },
+  {
+    path: '/login',
+    component: LoginView,
+    meta: {
+      layout: AuthLayout
+    }
+  },
+  {
+    path: '/profile',
+    component: ProfileView,
+    meta: {
+      layout: MainLayout
+    }
   },
   {
     path: '/component',
-    component: () => import('@/views/Component/ComponentView.vue')
+    component: ComponentView,
+    meta: {
+      layout: SimpleLayout
+    }
   }
 ]
 

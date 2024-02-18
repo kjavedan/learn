@@ -1,12 +1,10 @@
 <template>
   <div>
-    <Header />
-    <Sidebar />
+    <h1>Auth layout</h1>
     <main> <slot></slot> </main>
-    <Footer />
   </div>
 </template>
 
-<script setup></script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped></style>

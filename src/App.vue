@@ -1,12 +1,10 @@
-<script setup lang="ts">
-import Layout from '@/layout/Layout.vue'
-</script>
+<script setup lang="ts"></script>
 
 <template>
   <el-config-provider namespace="ep">
-    <Layout>
-      <RouterView />
-    </Layout>
+    <component :is="$route.meta.layout || 'div'">
+      <router-view />
+    </component>
   </el-config-provider>
 </template>
 
